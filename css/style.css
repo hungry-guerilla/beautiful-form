@@ -4,9 +4,9 @@
 }
 
 body {
-  background-color: steelblue;
+  background-color: rgba(32, 124, 150, 0.854);
   color: #fff;
-  font-family: "Rubik", sans-serif;
+  font-family: "Space mono", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,4 +81,28 @@ body {
 .form-control input:focus,
 .form-control input:valid {
   outline: 0;
+  border-bottom: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  -webkit-transition: 0.3s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: 0.3s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.3s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  -webkit-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+          transform: translateY(-30px);
 }
